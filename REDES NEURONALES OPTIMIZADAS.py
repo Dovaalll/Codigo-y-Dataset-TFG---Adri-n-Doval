@@ -70,7 +70,7 @@ num_epocas = 1000
 batch_size = 16
 perdidas = []
 
-print("🔄 Iniciando entrenamiento...")
+print("Iniciando entrenamiento...")
 for epoch in range(num_epocas):
     modelo.train()
     indices = torch.randperm(X_train_tensor.shape[0])
@@ -102,10 +102,10 @@ for epoch in range(num_epocas):
     else:
         paciencia_actual += 1
         if paciencia_actual >= paciencia:
-            print(f"⏹️ Early Stopping en la época {epoch}")
+            print(f"Early Stopping en la época {epoch}")
             break
 
-print("✅ Entrenamiento completado.")
+print("Entrenamiento completado.")
 
 # Evaluación del modelo
 modelo.eval()
@@ -125,12 +125,12 @@ mae = mean_absolute_error(y_test, y_pred)
 mape = np.mean(np.abs((y_test - y_pred) / y_test)) * 100
 
 # Mostrar resultados
-print("\n📊 Evaluación del Modelo Optimizado:")
-print(f"🔹 R² Score: {r2:.4f}")
-print(f"🔹 MSE: {mse:.2f}€")
-print(f"🔹 RMSE: {rmse:.2f}€")
-print(f"🔹 MAE: {mae:.2f}€")
-print(f"🔹 MAPE: {mape:.2f}%")
+print("\nEvaluación del Modelo Optimizado:")
+print(f"R² Score: {r2:.4f}")
+print(f"MSE: {mse:.2f}€")
+print(f"RMSE: {rmse:.2f}€")
+print(f"MAE: {mae:.2f}€")
+print(f"MAPE: {mape:.2f}%")
 
 # Graficar evolución de la pérdida
 plt.figure(figsize=(8, 5))
