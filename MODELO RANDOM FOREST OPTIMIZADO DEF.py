@@ -80,12 +80,12 @@ mae = mean_absolute_error(y_test_real, y_pred_real)
 rae = np.sum(np.abs(y_test_real - y_pred_real)) / np.sum(np.abs(y_test_real - np.mean(y_test_real)))
 
 # Mostrar resultados
-print(f"\n📊 Evaluación del Modelo Random Forest Optimizado:")
-print(f"  🔹 R² Score: {r2:.4f}")
-print(f"  🔹 RMSE (Raíz del Error Cuadrático Medio): {rmse:.2f}€")
-print(f"  🔹 MAE (Error Absoluto Medio): {mae:.2f}€")
-print(f"  🔹 RAE (Relative Absolute Error): {rae:.4f}")
-print(f"  🔹 OOB Score (Validación Interna OOB): {modelo_rf.oob_score_:.4f}")
+print(f"\n Evaluación del Modelo Random Forest Optimizado:")
+print(f"R² Score: {r2:.4f}")
+print(f"RMSE (Raíz del Error Cuadrático Medio): {rmse:.2f}€")
+print(f"MAE (Error Absoluto Medio): {mae:.2f}€")
+print(f"RAE (Relative Absolute Error): {rae:.4f}")
+print(f"OOB Score (Validación Interna OOB): {modelo_rf.oob_score_:.4f}")
 
 # **5. Visualización de Resultados**
 # Gráfico de Importancia de Variables
